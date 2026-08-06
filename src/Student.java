@@ -2,17 +2,29 @@
 import java.util.Scanner;
 
 public class Student {
-    String fullName;
-    int age;
-    double theoryGrade;
-    double practicalGrade;
+    private String fullName;
+    private int age;
+    private double theoryGrade;
+    private double practicalGrade;
 
-    double calcGPA() {
+    // Getter & Setter
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int value) {
+        if (value < 0) {
+            return;
+        }
+        age = value;
+    }
+
+    public double getGPA() {
         return (theoryGrade + practicalGrade) / 2;
     }
 
-    boolean isPassed() {
-        return calcGPA() >= 4;
+    public boolean isPassed() {
+        return getGPA() >= 5;
     }
 
     void input(Scanner sc) {
@@ -28,7 +40,7 @@ public class Student {
     void displayInfo() {
         System.out.println(String.format("Full name: %s", fullName));
         System.out.println(String.format("Age: %d", age));
-        System.out.println(String.format("GPA: %.1f", calcGPA()));
+        System.out.println(String.format("GPA: %.1f", getGPA()));
         if (isPassed()) {
             System.out.println("Result: Passed");
         } else {
