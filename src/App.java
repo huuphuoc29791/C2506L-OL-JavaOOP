@@ -1,19 +1,10 @@
 public class App {
     public static void main(String[] args) {
-        BankAccount A = new BankAccount("001325", "DUONG HUU PHUOC");
-        BankAccount B = new BankAccount("007592", "NGUYEN VAN AN");
+        Shape x = new Rectangle(5, 3);
+        Shape y = new Square(8);
+        Shape z = new Triangle(3, 4, 5);
 
-        A.setPIN("123456");
-        A.deposit(100000000);
-        A.displayInfo();
-        System.out.println();
-
-        A.withdraw(5000000);
-        A.displayInfo();
-        System.out.println();
-
-        A.transfer(B, 25000000);
-        A.displayInfo();
-        B.displayInfo();
+        System.out.println(z.getPerimeter());
+        System.out.println(z.getArea());
     }
 }
