@@ -38,5 +38,6 @@ public class Lecturer extends Staff {
         super.displayInfo();
         System.out.println(String.format("\t- Salary multiplier: %.1f", salaryMultiplier));
         System.out.println(String.format("\t- Session count: %d", sessionCount));
+        System.out.println(String.format("\t- Salary: %,d", getSalary()));
     }
 }

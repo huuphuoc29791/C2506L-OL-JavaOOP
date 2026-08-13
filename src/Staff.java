@@ -53,6 +53,6 @@ public abstract class Staff {
     public void displayInfo() {
         System.out.println(String.format("\t%s - %s", id, fullName));
         System.out.println(String.format("\t- Birthday: %s", birthday.toString()));
-        System.out.println(String.format("\t- Base salary: %d", baseSalary));
+        System.out.println(String.format("\t- Base salary: %,d", baseSalary));
     }
 }
