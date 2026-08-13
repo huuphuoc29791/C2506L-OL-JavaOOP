@@ -1,10 +1,9 @@
+
+import java.util.Date;
+
 public class App {
     public static void main(String[] args) {
-        Shape x = new Rectangle(5, 3);
-        Shape y = new Square(8);
-        Shape z = new Triangle(3, 4, 5);
-
-        System.out.println(z.getPerimeter());
-        System.out.println(z.getArea());
+        Staff s = new Lecturer("126", "Andy Smith", new Date(1991, 7, 29), 12000000, 35, 3.3);
+        s.displayInfo();
     }
 }
