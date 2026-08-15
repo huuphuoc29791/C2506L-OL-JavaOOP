@@ -10,6 +10,8 @@ public abstract class Staff {
 
     protected int baseSalary;
 
+    protected StaffType type;
+
     // Constructors
     public Staff(String id, String fullName, Date birthday, int baseSalary) {
         this.id = id;

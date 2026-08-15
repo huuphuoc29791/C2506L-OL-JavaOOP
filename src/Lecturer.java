@@ -18,6 +18,7 @@ public class Lecturer extends Staff {
         super(id, fullName, birthday, baseSalary);
         this.sessionCount = sessionCount;
         this.salaryMultiplier = salaryMultiplier;
+        type = StaffType.LECTURER;
     }
 
     // Methods

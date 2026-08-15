@@ -18,6 +18,7 @@ public class Scientist extends Staff {
         super(id, fullName, birthday, baseSalary);
         this.researchHours = researchHours;
         this.researchProjects = researchProjects;
+        type = StaffType.SCIENTIST;
     }
 
     // Methods

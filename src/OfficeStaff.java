@@ -14,6 +14,7 @@ public class OfficeStaff extends Staff {
 
         super(id, fullName, birthday, baseSalary);
         this.workingHours = workingHours;
+        type = StaffType.OFFICESTAFF;
     }
 
     // Methods
