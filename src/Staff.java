@@ -1,19 +1,19 @@
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class Staff {
     protected String id;
 
     protected String fullName;
 
-    protected Date birthday;
+    protected LocalDate birthday;
 
     protected int baseSalary;
 
     protected StaffType type;
 
     // Constructors
-    public Staff(String id, String fullName, Date birthday, int baseSalary) {
+    public Staff(String id, String fullName, LocalDate birthday, int baseSalary) {
         this.id = id;
         this.fullName = fullName;
         this.birthday = birthday;
@@ -33,11 +33,11 @@ public abstract class Staff {
         this.fullName = fullName;
     }
 
-    public Date getBirthday() {
+    public LocalDate getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
 

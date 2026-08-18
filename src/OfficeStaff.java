@@ -1,5 +1,5 @@
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class OfficeStaff extends Staff {
     private int workingHours;
@@ -8,7 +8,7 @@ public class OfficeStaff extends Staff {
     public OfficeStaff(
             String id,
             String fullName,
-            Date birthday,
+            LocalDate birthday,
             int baseSalary,
             int workingHours) {
 

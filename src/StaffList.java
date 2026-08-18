@@ -1,5 +1,8 @@
 
+import java.text.Collator;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 public class StaffList {
     private ArrayList<Staff> list;
@@ -29,7 +32,7 @@ public class StaffList {
     //// containsId(): Check if id exists in the list.
     public boolean containsId(String id) {
         for (Staff staff : list) {
-            if (staff.id == id) {
+            if (staff.id.equals(id)) {
                 return true;
             }
         }
@@ -39,7 +42,7 @@ public class StaffList {
     //// findIndex(): Find the index of the staff by id.
     public int findIndex(String id) {
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).id == id) {
+            if (list.get(i).id.equals(id)) {
                 return i;
             }
         }
@@ -73,5 +76,21 @@ public class StaffList {
         }
         list.remove(index);
         return true;
+    }
+
+    //// filterBySalary(): List all staffs that has salary ≥ salary parameter
+    public ArrayList<Staff> filterBySalary(int salary) {
+        ArrayList<Staff> result = list.stream()
+                .filter(s -> s.getSalary() >= salary)
+                .collect(Collectors.toCollection(ArrayList::new));
+        return result;
+    }
+
+    //// sortByName(): Sort staff list by name
+    public ArrayList<Staff> sortByName() {
+        ArrayList<Staff> result = list.stream()
+                .sorted(Comparator.comparing(Staff::getFullName))
+                .collect(Collectors.toCollection(ArrayList::new));
+        return result;
     }
 }

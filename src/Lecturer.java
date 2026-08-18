@@ -1,5 +1,5 @@
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Lecturer extends Staff {
     private int sessionCount;
@@ -10,7 +10,7 @@ public class Lecturer extends Staff {
     public Lecturer(
             String id,
             String fullName,
-            Date birthday,
+            LocalDate birthday,
             int baseSalary,
             int sessionCount,
             double salaryMultiplier) {
